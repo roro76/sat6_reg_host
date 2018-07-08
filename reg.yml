@@ -1,10 +1,8 @@
 ---
 - hosts: all
- become: true
-
  tasks:
- - redhat_subscription:
-     state: present
-     org_id: Base
-     activationkey: Test Kickstart Key
-     autosubscribe: true
+   - redhat_subscription:
+       state: present
+       org_id: Base
+       activationkey: Test Kickstart Key
+       autosubscribe: true
