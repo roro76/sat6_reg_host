@@ -6,6 +6,6 @@
   tasks:
   - redhat_subscription:
     state: present
-    org_id: Base
+    org_id: "Base"
     activationkey: "Test Kickstart Key"
     autosubscribe: true
