@@ -4,9 +4,9 @@
   become: true
 
   tasks:
-  -name: Execute subscription registration with auto-attach
-   redhat_subscription:
-     state: present
-     org_id: Base
-     activationkey: Test Kickstart Key
-     autosubscribe: true
+  - name: Execute subscription registration with auto-attach
+    redhat_subscription:
+      state: present
+      org_id: Base
+      activationkey: Test Kickstart Key
+      autosubscribe: true
