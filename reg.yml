@@ -1,8 +1,12 @@
 ---
-- hosts: all
- tasks:
-   - redhat_subscription:
-       state: present
-       org_id: Base
-       activationkey: Test Kickstart Key
-       autosubscribe: true
+- name: Register new Satellite hosts
+  hosts: all
+  become: true
+
+  tasks:
+  -name: Execute subscription registration with auto-attach
+   redhat_subscription:
+     state: present
+     org_id: Base
+     activationkey: Test Kickstart Key
+     autosubscribe: true
