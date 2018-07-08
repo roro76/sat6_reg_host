@@ -1,0 +1,10 @@
+---
+- name: Register a new host with Satellite 6
+  hosts: all
+  become: true
+
+  tasks:
+  - redhat_subscription:
+    state: present
+    activationkey: Test Kickstart
+    autosubscribe
