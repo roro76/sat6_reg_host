@@ -4,8 +4,13 @@
   become: true
 
   tasks:
+  - name: Deploy katello-ca-consumer-latest on Satellite client
+    yum:
+      name: http://dcrhelsat.dc.local/pub/katello-ca-consumer-latest.noarch.rpm
+      state: present
+  
   - name: Execute subscription registration with auto-attach
     redhat_subscription:
       state: present
-      org_id: "Base"
+      org_id: Base
       activationkey: Test Kickstart Key
