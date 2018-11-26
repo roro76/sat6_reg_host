@@ -6,7 +6,7 @@
   tasks:
   - name: Deploy katello-ca-consumer-latest on Satellite client
     yum:
-      name: http://dcrhelsat.dc.local/pub/katello-ca-consumer-latest.noarch.rpm
+      name: http://satgm.example.com/pub/katello-ca-consumer-latest.noarch.rpm
       state: present
   
   - name: Execute subscription registration with auto-attach
